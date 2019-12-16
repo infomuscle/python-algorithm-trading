@@ -11,10 +11,15 @@ class Contact:
         print("E-mail: ", self.e_mail)
         print("Address: ", self.addr)
 
+def set_contact():
+    name = input("Name: ")
+    phone_number = input("Phone Number: ")
+    e_mail = input("E-mail: ")
+    addr = input("Address: ")
+    print(name, phone_number, e_mail, addr)
 
 def run():
-    kim = Contact('김일구', '010-8812-1193', 'ilgu.kim@python.com', 'Seoul')
-    kim.print_info()
+    set_contact()
 
 if __name__ == "__main__":
     run()
