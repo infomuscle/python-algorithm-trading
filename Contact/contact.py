@@ -16,7 +16,8 @@ def set_contact():
     phone_number = input("Phone Number: ")
     e_mail = input("E-mail: ")
     addr = input("Address: ")
-    print(name, phone_number, e_mail, addr)
+    contact = Contact(name, phone_number, e_mail, addr)
+    return contact
     
 def print_menu():
     print("1. 연락처 입력")
@@ -27,9 +28,13 @@ def print_menu():
     return int(menu)
 
 def run():
+    contact_list = []
     while 1:
         menu = print_menu()
-        if menu == 4:
+        if menu == 1:
+            contact = set_contact()
+            contact_list.append(contact)
+        elif menu == 4:
             break
 
 if __name__ == "__main__":
