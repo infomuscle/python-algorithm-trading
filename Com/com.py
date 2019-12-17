@@ -25,5 +25,5 @@ excel.Visible = True
 wb = excel.Workbooks.Add()
 ws = wb.Worksheets("Sheet1")
 ws.Cells(1,1).Value = "hello world"
-wb.SaveAs('test1.xlsx')
+wb.SaveAs('C:\\bokeun\\pycharm\\python-algorithm-trading\\Com\\test.xlsx')
 excel.Quit()
