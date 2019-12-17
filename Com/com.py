@@ -29,6 +29,12 @@ excel.Visible = True
 
 wb = excel.Workbooks.Open('C:\\bokeun\\pycharm\\python-algorithm-trading\\Com\\input.xlsx')
 ws = wb.ActiveSheet
-print(ws.Cells(1,1).Value)
+# print(ws.Cells(1,1).Value)
 
-excel.Quit()
+ws.Cells(1,2).Value = "is"
+ws.Range("C1").Value = "good"
+ws.Range("C1").Interior.ColorIndex = 10
+
+ws.Range("A2:C2").Interior.ColorIndex = 27
+
+# excel.Quit()
