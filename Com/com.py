@@ -22,8 +22,13 @@ print(instCpStockCode.NameToCode('유한양행'))
 excel = win32com.client.Dispatch("Excel.Application")
 excel.Visible = True
 
-wb = excel.Workbooks.Add()
-ws = wb.Worksheets("Sheet1")
-ws.Cells(1,1).Value = "hello world"
-wb.SaveAs('C:\\bokeun\\pycharm\\python-algorithm-trading\\Com\\test.xlsx')
+# wb = excel.Workbooks.Add()
+# ws = wb.Worksheets("Sheet1")
+# ws.Cells(1,1).Value = "hello world"
+# wb.SaveAs('C:\\bokeun\\pycharm\\python-algorithm-trading\\Com\\test.xlsx')
+
+wb = excel.Workbooks.Open('C:\\bokeun\\pycharm\\python-algorithm-trading\\Com\\input.xlsx')
+ws = wb.ActiveSheet
+print(ws.Cells(1,1).Value)
+
 excel.Quit()
