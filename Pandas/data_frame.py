@@ -20,3 +20,13 @@ date = ['16.02.29', '16.02.26', '16.02.25', '16.02.24', '16.02.23',]
 daeshin_day = DataFrame(daeshin, columns=['open', 'high', 'low', 'close'], index = date)
 
 print(daeshin_day)
+
+close = daeshin_day['close']
+print(close)
+
+day_data = daeshin_day.loc['16.02.24']
+print(day_data)
+print(type(day_data))
+
+print(daeshin_day.columns)
+print(daeshin_day.index)
